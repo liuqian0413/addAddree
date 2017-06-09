@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/cleanOrder/cleanOrder",
+    "pages/chooseAddre/chooseAddre",
+    "pages/modifyAddre/modifyAddre",
+    "pages/newAddre/newAddre",
+
+  ],
+  "utils": [
+    "utils/utils/utils"
+  ],
+  "window": {
+    "backgroundTextStyle": "white",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "拜托阿姨",
+    "navigationBarBackgroundColor": "#FFC800"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#FFC800",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/5.png",
+        "iconPath": "images/4.png",
+        "pagePath": "pages/myOrder/myOrder",
+        "text": "订单"
+      },
+      {
+        "selectedIconPath": "images/3.png",
+        "iconPath": "images/6.png",
+        "pagePath": "pages/index/index",
+        "text": "预约"
+      },
+      {
+        "selectedIconPath": "images/2.png",
+        "iconPath": "images/1.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  }
+}

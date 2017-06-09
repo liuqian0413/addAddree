@@ -1,0 +1,61 @@
+<!-- 信息部分开始 -->
+<form bindsubmit="formSubmit" report-submit="true">
+<view class = "info">
+<!-- 姓名部分 -->
+<view class = "item">
+<text>用户姓名</text>
+<view class = "right">
+<input type="text" name = "name" value = "{{name}}" focus="{{focus}}"/>
+</view>
+</view>
+
+<!-- 电话部分 -->
+<view class = "item">
+<text>联系电话</text>
+<view class = "right">
+<input name="tel" type="number" value="{{tel}}"  focus="{{focus}}"/>
+</view>
+</view>
+
+
+
+<!-- 收货地址部分 -->
+<view class = "item">
+<text>所在区域</text>
+<view class = "right">
+<picker name="addre" class = "addre" value="{{addreValue}}" range="{{addreRange}}" bindchange="addrePickerBindchange">
+ {{addreRange[addreValue]}}
+</picker>
+
+</view>
+</view>
+
+<!-- 详细地址部分 -->
+<view class = "item">
+<text>详细地址</text>
+<view class = "right">
+<input name="door" type="text" value="{{door}}"  focus="{{focus}}"/>
+</view>
+</view>
+
+<!-- 房屋面积部分 -->
+<view class = "item">
+<text>房屋面积</text>
+<view class = "right">
+<picker name = "area" class = "area" value="{{areaValue}}" range="{{areaRange}}" bindchange="areaPickerBindchange">
+ {{areaRange[areaValue]}}
+</picker>
+<text>　㎡</text>
+<text class = "remind">(以便自动计算保洁时间和服务人数)</text>
+
+</view>
+</view>
+
+
+
+</view>
+<!-- 信息部分结束 -->
+<button class = "save" formType="submit" >保存</button>
+<button class = "delete" bindtap = "delete">删除该地址</button>
+<button class = "delete" bindtap = "cancel">取消</button>
+</form>

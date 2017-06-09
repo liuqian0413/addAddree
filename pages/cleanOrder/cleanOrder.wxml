@@ -1,0 +1,85 @@
+<form bindsubmit="formSubmit" report-submit="true">
+<view class = "section">
+<view class = "addre1" bindtap = "toChooseAddre" style="display:{{display1}} ">
+  <view class = "left">
+    <image src="../../images/map.jpg" 
+    mode = "widthFix"/><text class = "red">　选择您的地址</text>
+  </view>
+  <view class = "right">
+      <image class="more" src = "../../images/right.png"
+    mode = "widthFix" />
+  </view>
+  </view>
+
+ 
+
+<view class = "addre1 addre2" bindtap = "toChooseAddre"  style="display:{{display2}} "  >
+
+  <view class = "left">
+  <view class="left_top">
+  <image src="../../images/map2.png" 
+    mode = "widthFix"/>
+    {{name}}　{{tel}}　　　　<text class = "area">{{area}} ㎡</text>
+    </view>
+    <view class = "left_bottom">
+      地址：{{addre}}
+    </view>
+  </view>
+  <view class = "right">
+    <image class="more" src = "../../images/right.png"
+    mode = "widthFix" />
+  </view>
+</view>
+
+<view class = "line"><image src = "../../images/line.jpg" mode="aspectFit" repeat = "repeat"/></view>
+
+<view class = "item ">
+  <view class = "left">
+    服务项目
+  </view>
+  <view class = "right">
+    <view class = "gray">上门保洁</view>
+  </view>
+</view>
+
+
+<view class = "item">
+  <view class = "left">
+    服务时间
+  </view>
+  <view class = "right">
+    <picker name="date" mode="date" value="{{dateValue}}" start="2017-05-19" end="2100-12-12" bindchange="datePickerBindchange">
+  {{dateValue}}
+</picker>
+　|　
+<picker name="time" mode="time" value="{{timeValue}}" start="08:00" end="18:00" bindchange="timePickerBindchange">
+  {{timeValue}}
+  </picker>
+  </view>
+</view>
+
+
+<view class = "item">
+  <view class = "left">
+    可选服务
+  </view>
+  <view class = "right">
+  <checkbox-group name ="marks">
+     <label class="checkbox" wx:for="{{marks}}">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}" color="#FFC800"/>{{item.value}}
+  </label>
+  </checkbox-group>
+  </view>
+</view>
+
+
+<view class = "mark">
+  <view>备注</view>
+  <view class = "mark_content">
+    <textarea name= "comment" value="{{comment}}"></textarea>
+  </view>
+</view>
+
+</view>
+<button class = "submit"  formType="submit">立即预约</button>
+ </form>
